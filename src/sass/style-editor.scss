@@ -5,11 +5,7 @@ Editor Styles
 /** === Includes === */
 
 @import "variables-site/variables-site";
-@import "mixins/mixins-master";
-@import "typography/typography";
-@import "forms/forms";
-@import "site/widgets";
-@import "blocks/blocks";
+@import "mixins/mixins-master"; 
 
 /** === Editor Frame === */
 
@@ -722,22 +718,6 @@ ul.wp-block-archives,
 /* Make sure our non-latin font overrides don't overwrite the iconfont used in the classic editor toolbar */
 .wp-block[data-type="core/freeform"] .mce-btn i {
 	font-family: dashicons !important;
-}
-
-//@import "blocks/blocks";
-
-// Admin font location
-@font-face {
-  font-family: 'Socicon';
-  src:  url('../wp-content/themes/gutenkind/dist/fonts/Socicon.eot?484r1f');
-  src:  url('../wp-content/themes/gutenkind/dist/fonts/Socicon.eot?484r1f#iefix') format('embedded-opentype'),
-    url('../wp-content/themes/gutenkind/dist/fonts/Socicon.woff2?484r1f') format('woff2'),
-    url('../wp-content/themes/gutenkind/dist/fonts/Socicon.ttf?484r1f') format('truetype'),
-    url('../wp-content/themes/gutenkind/dist/fonts/Socicon.woff?484r1f') format('woff'),
-    url('../wp-content/themes/gutenkind/dist/fonts/Socicon.svg?484r1f#Socicon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-	font-display: fallback;
 }
 
 .editor-block-list__layout .editor-block-list__block[data-align=full]>.editor-block-mover {
