@@ -1,8 +1,2 @@
 node_modules
 package-lock.json
-dist
-_build
-lang
-inc/theme-setup/merlin/**/*
-*.map
-*.css
