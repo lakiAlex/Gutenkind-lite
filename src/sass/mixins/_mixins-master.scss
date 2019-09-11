@@ -1,0 +1,125 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get($columns, $numberColumns) - (($columns__margin * ($numberColumns - 1)) / $numberColumns);
+}
+
+/* Nested sub-menu padding: 10 levels deep */
+@mixin nestedSubMenuPadding() {
+
+	ul {
+		counter-reset: submenu;
+	}
+
+	ul > li > a::before {
+		opacity: .26;
+		font-family: $font__body;
+		font-weight: normal;
+		content: "\2219\00a0" counters(submenu, "\2219\00a0", none);
+		counter-increment: submenu
+	}
+}
+
+/* Antialiasing */
+@mixin antialiased() {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Flexbox */
+@mixin flex() {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* Buttons */
+@mixin button() {
+	display: inline-block;
+	transition: $transition;
+	background: $color__background-button;
+	border: none;
+	border-radius: 0px;
+	box-sizing: border-box;
+	color: $color__background-body;
+	//font-family: $font__link;
+	font-size: 11px;
+	font-weight: 500;
+	line-height: 34px;
+	letter-spacing: 1.4px;
+	text-transform: uppercase;
+	outline: none;
+	padding: 4px 30px 3px;
+	text-decoration: none;
+	vertical-align: bottom;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.004);
+	text-rendering: optimizeLegibility!important;
+	-webkit-font-smoothing: antialiased!important;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+
+	&:not(.has-background) {
+		background-color: $color__background-button;
+	}
+
+	&:not(.has-text-color) {
+		color: white;
+	}
+
+	&:hover {
+		background: $color__background-button-hover;
+		color: $color__background-body;
+		cursor: pointer;
+	}
+
+	&:visited {
+		color: $color__background-body;
+		text-decoration: none;
+	}
+
+	&:focus {
+		background: $color__background-button-focus;
+		outline: none;
+	}
+}
+@mixin text__link() {
+	font-size: 10px;
+	font-weight: 500;
+	line-height: 1.6;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	//font-family: $font__link;
+	color: $color__text-main;
+}
+
+@mixin link() {
+	position: relative;
+	font-size: 10.1px;
+	line-height: 13px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	padding-bottom: 8px;
+	border-bottom: 1px solid;
+	border-color: $color__border;
+	text-decoration: none;
+	background-color: transparent;
+	color: $color__text-main;
+	position: relative;
+	-webkit-text-stroke: 0.4px;
+	-webkit-text-stroke: 0.4px rgba(0, 0, 0, 0.4);
+	transition: $transition;
+
+	&:hover {
+		color:  $color__text-main;
+		border-color: #7d7d7d;
+		opacity: .8;
+	}
+}
+
+@import "utilities";

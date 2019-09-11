@@ -1,0 +1,7 @@
+node_modules
+dist
+_build
+lang
+inc/theme-setup/merlin/**/*
+*.map
+*.css
