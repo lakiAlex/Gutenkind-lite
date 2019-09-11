@@ -2767,9 +2767,9 @@ body.page .main-navigation {
   }
 }
 
-/* + .comments-area {
++ .comments-area {
   margin-top: calc(3 * 1rem);
-} */
+}
 
 @media only screen and (min-width: 768px) {
   .comments-area .comments-title-wrap {
