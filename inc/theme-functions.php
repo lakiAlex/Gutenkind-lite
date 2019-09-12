@@ -45,30 +45,6 @@ function contactform_dequeue_scripts() {
 add_action( 'wp_enqueue_scripts', 'contactform_dequeue_scripts', 99 );
 
 /**
-* Count Format
-*/
-function gutenkind_format_number($number) {
-	$precision = 1;
-	if ( $number >= 1000 && $number < 1100 || $number >= 2000 && $number < 2100 ) {
-		$formatted = number_format( $number/1000, 0 ).'K';
-	} elseif ( $number >= 3000 && $number < 3100 || $number >= 4000 && $number < 4100 ) {
-		$formatted = number_format( $number/1000, 0 ).'K';
-	} elseif ( $number >= 5000 && $number < 5100 || $number >= 4000 && $number < 6100 ) {
-		$formatted = number_format( $number/1000, 0 ).'K';
-	} elseif ( $number >= 1100 && $number < 1000000 ) {
-		$formatted = number_format( $number/1000, $precision ).'K';
-	} else if ( $number >= 1000000 && $number < 1000000000 ) {
-		$formatted = number_format( $number/1000000, $precision ).'M';
-	} else if ( $number >= 1000000000 ) {
-		$formatted = number_format( $number/1000000000, $precision ).'B';
-	} else {
-		$formatted = $number; // Number is less than 1000
-	}
-	$formatted = str_replace( '.00', '', $formatted );
-	return $formatted;
-}
-
-/**
 * Meta Category
 */
 function gutenkind_meta_cat() {
@@ -249,6 +225,38 @@ function gutenkind_tags() {
 	}
 }
 
+/**
+ * Single Post Pagination
+ */
+function gutenkind_single_pag($post, $string ,$thumbSize) {
+ 	$id				= $post->ID;
+	$link 			= get_permalink($id);
+	$title			= $post->post_title;
+	$cat_link		= get_category_link(get_the_category($id)[0]->term_id);
+	$cat_name		= get_the_category($id)[0]->cat_name;
+	$thumb_url 		= wp_get_attachment_image_src(get_post_thumbnail_id($id), $thumbSize, false);
+	$full_img_url 	= wp_get_attachment_image_src(get_post_thumbnail_id($id), 'full', false);
+	$bg = $thumb_url[0] ? $bg = $thumb_url[0] : $full_img_url[0];
+
+	printf(
+		'<a href="%1$s"><p class="link">%8$s %2$s</p><h4>%3$s</h4></a>
+		<div class="single-nav-tip">
+			<div class="single-nav-img" data-bg="%4$s"></div>
+			<div class="single-nav-info">
+				<div><span class="meta-cat cat-links"><a href="%5$s">%6$s</a></span><h3><a href="%1$s">%7$s</a></h3></div>
+			</div>
+		</div>',
+		esc_url($link),
+		esc_html($string),
+		wp_trim_words(esc_html($title), 5, '&hellip;'),
+		esc_url($bg),
+		esc_url($cat_link),
+		esc_textarea($cat_name),
+		esc_html($title),
+		gutenkind_template_part('/dist/svg/svg-arrow-down')
+	);
+}
+
 /*
 * Related Posts
 */
@@ -366,6 +374,30 @@ function gutenkind_social_media() {
 }
 
 /**
+* Count Format
+*/
+function gutenkind_format_number($number) {
+	$precision = 1;
+	if ( $number >= 1000 && $number < 1100 || $number >= 2000 && $number < 2100 ) {
+		$formatted = number_format( $number/1000, 0 ).'K';
+	} elseif ( $number >= 3000 && $number < 3100 || $number >= 4000 && $number < 4100 ) {
+		$formatted = number_format( $number/1000, 0 ).'K';
+	} elseif ( $number >= 5000 && $number < 5100 || $number >= 4000 && $number < 6100 ) {
+		$formatted = number_format( $number/1000, 0 ).'K';
+	} elseif ( $number >= 1100 && $number < 1000000 ) {
+		$formatted = number_format( $number/1000, $precision ).'K';
+	} else if ( $number >= 1000000 && $number < 1000000000 ) {
+		$formatted = number_format( $number/1000000, $precision ).'M';
+	} else if ( $number >= 1000000000 ) {
+		$formatted = number_format( $number/1000000000, $precision ).'B';
+	} else {
+		$formatted = $number; // Number is less than 1000
+	}
+	$formatted = str_replace( '.00', '', $formatted );
+	return $formatted;
+}
+
+/**
  * Returns Cart Contents / Ajax
  */
 function gutenkind_ajax_cart($fragments) {
@@ -376,38 +408,6 @@ function gutenkind_ajax_cart($fragments) {
  	return $fragments;
  }
 add_filter('woocommerce_add_to_cart_fragments', 'gutenkind_ajax_cart');
-
-/**
- * Single Post Pagination
- */
-function gutenkind_single_pag($post, $string ,$thumbSize) {
- 	$id				= $post->ID;
-	$link 			= get_permalink($id);
-	$title			= $post->post_title;
-	$cat_link		= get_category_link(get_the_category($id)[0]->term_id);
-	$cat_name		= get_the_category($id)[0]->cat_name;
-	$thumb_url 		= wp_get_attachment_image_src(get_post_thumbnail_id($id), $thumbSize, false);
-	$full_img_url 	= wp_get_attachment_image_src(get_post_thumbnail_id($id), 'full', false);
-	$bg = $thumb_url[0] ? $bg = $thumb_url[0] : $full_img_url[0];
-
-	printf(
-		'<a href="%1$s"><p class="link">%8$s %2$s</p><h4>%3$s</h4></a>
-		<div class="single-nav-tip">
-			<div class="single-nav-img" data-bg="%4$s"></div>
-			<div class="single-nav-info">
-				<div><span class="meta-cat cat-links"><a href="%5$s">%6$s</a></span><h3><a href="%1$s">%7$s</a></h3></div>
-			</div>
-		</div>',
-		esc_url($link),
-		esc_html($string),
-		wp_trim_words(esc_html($title), 5, '&hellip;'),
-		esc_url($bg),
-		esc_url($cat_link),
-		esc_textarea($cat_name),
-		esc_html($title),
-		gutenkind_template_part('/dist/svg/svg-arrow-down')
-	);
-}
 
 /**
  * Returns information about the current post's discussion, with cache support.

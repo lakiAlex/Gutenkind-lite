@@ -1,20 +1,18 @@
 <?php
 
-$infinite		= get_theme_mod('single-infinite', false);
-$sidebar		= gutenkind_field('single-field-sidebar');
-$sidebar = $sidebar ? $sidebar : get_theme_mod('single-sidebar', 'right');
-
+$single_header  = get_theme_mod('single-header-type', 'standard');
+$sidebar        = get_theme_mod('single-sidebar', 'right');
 $tags			= get_theme_mod('single-tags', true);
+$comments		= get_theme_mod('single-comments-form', true);
 $author_bio		= get_theme_mod('single-author-bio', true);
 $nav			= get_theme_mod('single-nav', true);
 $related		= get_theme_mod('single-related', true);
-$comments		= get_theme_mod('single-comments-form', true);
+$infinite		= get_theme_mod('single-infinite', false);
 
-$classes[] = 'voss-infinite-'.$infinite;
-$classes[] = 'voss-sidebar-'.$sidebar;
-
-$single_header	= gutenkind_field('single-field-header-type');
-$single_header = $single_header ? $single_header : get_theme_mod('single-header-type', 'standard');
+$classes = array(
+	'voss-infinite-'.$infinite,
+	'voss-sidebar-'.$sidebar
+);
 
 if (in_array($single_header, array('fullwidth', 'fullscreen'))) {
 	get_template_part('/parts/post/post', 'header');
@@ -35,7 +33,7 @@ if (in_array($single_header, array('fullwidth', 'fullscreen'))) {
 				<div class="entry-content">
 					<?php
 						the_content();
-						wp_link_pages(array('before' => '<div class="page-links">' . esc_html__( 'Pages:', 'gutenkind' ),'after'  => '</div>',));
+						wp_link_pages(array('before' => '<div class="page-links">' . esc_html__('Pages:', 'gutenkind'),'after'  => '</div>',));
 						if ($tags == true && function_exists('gutenkind_tags')) gutenkind_tags();
 					?>
 				</div>

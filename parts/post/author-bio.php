@@ -16,7 +16,6 @@ if ((bool) get_the_author_meta('description')) { ?>
 		</div>
 
 		<div class="author-info">
-
 			<span class="author-subheading"><?php esc_html_e('Published by', 'gutenkind' ); ?></span>
 			<h4 class="author-name">
 				<a class="author-link" href="<?php echo esc_url(get_author_posts_url($id, $name)); ?>">
@@ -25,7 +24,6 @@ if ((bool) get_the_author_meta('description')) { ?>
 			</h4>
 			<p><?php echo esc_html($desc); ?></p>
 			<div class="author-social"></div>
-
 		</div>
 
 	</div><?php

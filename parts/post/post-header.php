@@ -1,17 +1,13 @@
 <?php
 
-$single_header	= gutenkind_field('single-field-header-type');
-$single_header = $single_header ? $single_header : get_theme_mod('single-header-type', 'standard');
-
+$single_header	= get_theme_mod('single-header-type', 'standard');
 $cat_link		= get_theme_mod('single-cat-link', true);
-$thumb          = get_theme_mod('single-featured', true);
 $author         = get_theme_mod('single-author', true);
 $date           = get_theme_mod('single-date', true);
-$views          = get_theme_mod('single-views', true);
-$read_time      = get_theme_mod('single-read', true);
 $comments       = get_theme_mod('single-comments', true);
-$format = get_post_format() ? : 'standard';
-$thumb_size = '';
+$thumb          = get_theme_mod('single-featured', true);
+$format         = get_post_format() ? : 'standard';
+$thumb_size     = '';
 
 if ($format == 'standard') {
 	if ($single_header == 'wrapped') {
@@ -31,8 +27,6 @@ if ($format == 'standard') {
 			<?php
 				if (function_exists('gutenkind_meta_author') && $author == true) gutenkind_meta_author();
 				if (function_exists('gutenkind_meta_date') && $date == true) gutenkind_meta_date();
-				if (function_exists('vossen_meta_views') && $views == true) { vossen_set_view(); vossen_meta_views(); }
-				if (function_exists('vossen_meta_read') && $read_time == true) vossen_meta_read();
 				if (function_exists('gutenkind_meta_comments') && $comments == true) gutenkind_meta_comments();
 			?>
 		</div>

@@ -593,22 +593,6 @@ if (class_exists('kirki')) {
 
 	Kirki::add_field( 'theme_mod', array(
 		'type'        => 'toggle',
-		'settings'    => 'single-views',
-		'label'       => esc_html__( 'Show Views', 'gutenkind' ),
-		'section'     => 'post_settings',
-		'default'     => true,
-	) );
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'toggle',
-		'settings'    => 'single-read',
-		'label'       => esc_html__( 'Show Read Time', 'gutenkind' ),
-		'section'     => 'post_settings',
-		'default'     => true,
-	) );
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'toggle',
 		'settings'    => 'single-comments',
 		'label'       => esc_html__( 'Show Comments Link', 'gutenkind' ),
 		'section'     => 'post_settings',

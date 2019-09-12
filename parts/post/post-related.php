@@ -1,10 +1,10 @@
 <?php
 
-$related = gutenkind_related_posts( get_the_ID(), 7 );
+$related = gutenkind_related_posts(get_the_ID(), 7);
 
-if( $related->have_posts() ) : ?>
+if ($related->have_posts()) : ?>
 	<div class="single-related">
-		<h4 class="section-title"><?php esc_html_e( 'Related Stories', 'gutenkind' ); ?></h4>
+		<h4 class="section-title"><?php esc_html_e('Related Stories', 'gutenkind'); ?></h4>
 
 		<div class="vslider"
 			data-style="9"
@@ -21,7 +21,7 @@ if( $related->have_posts() ) : ?>
 			data-spacebetween="30"
 	   >
 			<div class="swiper-wrapper">
-				<?php while ( $related->have_posts() ) : $related->the_post(); ?>
+				<?php while ($related->have_posts()) : $related->the_post(); ?>
 
 					<div class="swiper-slide voss-slide">
 

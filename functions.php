@@ -112,7 +112,6 @@ function gutenkind_menu_header() {
 			'fallback_cb' 	 => false,
 			'echo'			 => false,
 			'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-			'walker' 		 => new gutenkind_cat_menu_Walker
 		)
 	);
 	if ($menu) {
@@ -215,5 +214,4 @@ require_once get_parent_theme_file_path('/inc/theme-setup/merlin/class-merlin.ph
 require_once get_parent_theme_file_path('/inc/theme-setup/merlin-config.php');
 
 require get_parent_theme_file_path('/inc/theme-customizer.php');
-require get_parent_theme_file_path('/inc/theme-fields.php');
 require get_parent_theme_file_path('/inc/theme-functions.php');
