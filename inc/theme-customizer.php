@@ -18,6 +18,44 @@ if (class_exists('kirki')) {
 	  'capability'    => 'edit_theme_options',
 	  'option_type'   => 'theme_mod',
 	));
+	
+	/*--------------------------------------------------------------
+	# Homepage
+	--------------------------------------------------------------*/
+	
+	// Settings
+	Kirki::add_field( 'theme_mod', array(
+		'type'        => 'toggle',
+		'settings'    => 'home-carousel',
+		'label'       => esc_html__( 'Show Top Carousel', 'gutenkind' ),
+		'section'     => 'static_front_page',
+		'default'     => true,
+	) );
+	
+	Kirki::add_field( 'theme_mod', array(
+		'type'        => 'toggle',
+		'settings'    => 'home-trending',
+		'label'       => esc_html__( 'Show Trending Posts', 'gutenkind' ),
+		'section'     => 'static_front_page',
+		'default'     => true,
+	) );
+	
+	Kirki::add_field( 'theme_mod', array(
+		'type'        => 'toggle',
+		'settings'    => 'home-latest',
+		'label'       => esc_html__( 'Show Latest Posts', 'gutenkind' ),
+		'section'     => 'static_front_page',
+		'default'     => true,
+	) );
+	
+	Kirki::add_field( 'theme_mod', array(
+		'type'        => 'toggle',
+		'settings'    => 'home-popular',
+		'label'       => esc_html__( 'Show Popular Posts', 'gutenkind' ),
+		'section'     => 'static_front_page',
+		'default'     => true,
+	) );
+	
 
 	/*--------------------------------------------------------------
 	# Header & Logo
