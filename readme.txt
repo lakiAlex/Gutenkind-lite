@@ -15,7 +15,6 @@ Featuring a purposeful, responsive design and a fully-featured WooCommerce shop.
 
 Mobile-first, Responsive Layout
 Custom Colors
-Custom Header
 Social Links
 Post Formats
 The GPLv2+

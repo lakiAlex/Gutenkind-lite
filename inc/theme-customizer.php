@@ -100,7 +100,7 @@ if (class_exists('kirki')) {
 		'settings'        => 'adbar-editor',
 		'label'           => esc_html__( 'Ad Image', 'gutenkind' ),
 		'section'         => 'header_section',
-		'default'         => '<a href="https://goo.gl/QMgrzW"><img src="'. get_template_directory_uri() . '/dist/img/banner-long.jpg"/></a>',
+		'default'         => '<img src="'. get_template_directory_uri() . '/dist/img/banner-long.jpg"/>',
 		'active_callback' => array(
 			array(
 	            'setting'  => 'header-adbar',

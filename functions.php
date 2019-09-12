@@ -12,6 +12,9 @@ function gutenkind_setup() {
 
 	// Let WordPress manage the document title
 	add_theme_support('title-tag');
+	
+	// Specify the $content_width variable
+	if (!isset($content_width)) $content_width = 900;
 
 	// Enable support for Post Thumbnails on posts and pages
 	add_theme_support('post-thumbnails');
@@ -208,9 +211,5 @@ add_action('widgets_init', 'gutenkind_register_sidebars');
  * Require theme files
  */
 require get_parent_theme_file_path('/inc/theme-setup/tgm-config.php');
-require_once get_parent_theme_file_path('/inc/theme-setup/merlin/vendor/autoload.php');
-require_once get_parent_theme_file_path('/inc/theme-setup/merlin/class-merlin.php');
-require_once get_parent_theme_file_path('/inc/theme-setup/merlin-config.php');
-
 require get_parent_theme_file_path('/inc/theme-customizer.php');
 require get_parent_theme_file_path('/inc/theme-functions.php');
