@@ -47,18 +47,6 @@ function css() {
 		.pipe(browsersync.stream());
 }
 
-// Compile, minify and rename admin script
-function jsAdmin() {
-	return src("./src/js/admin.js")
-		.pipe(babel({
-            presets: ['@babel/env']
-        }))
-		//.pipe(uglify())
-		.pipe(rename('admin.min.js'))
-		.pipe(dest("./dist/js/"))
-		.pipe(browsersync.stream());
-}
-
 // Concatenate and minify vendor scripts
 function jsVendor() {
 	return src("./src/js/vendor/*.js")
@@ -140,7 +128,6 @@ function zip() {
 // Watch files
 function watchFiles() {
 	watch("./src/sass/**/*.scss", series(css));
-	watch("./src/js/admin.js", series(jsAdmin));
 	watch("./src/js/vendor/*", series(jsVendor));
 	watch("./src/js/main.js", series(jsMain));
 	watch("./src/js/temp/*", series(js));
@@ -149,11 +136,10 @@ function watchFiles() {
 // Export tasks
 exports.zip = zip;
 exports.lang = lang;
-exports.jsAdmin = jsAdmin;
 exports.jsVendor = jsVendor;
 exports.jsMain = jsMain;
 exports.js = js;
 exports.css = css;
 
-exports.build = parallel(css, series(jsAdmin, jsVendor, jsMain, js), fonts, img, svg, lang, zip);
+exports.build = parallel(css, series(jsVendor, jsMain, js), fonts, img, svg, lang, zip);
 exports.default = parallel(watchFiles, browserSync);
