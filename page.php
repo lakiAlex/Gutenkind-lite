@@ -2,7 +2,6 @@
 
 $page_title = get_theme_mod('page-header-title', true);
 $page_thumb = get_theme_mod('page-header-thumb', true);
-$hide_page_title = gutenkind_field('page-field-title');
 
 ?>
 
@@ -14,7 +13,7 @@ $hide_page_title = gutenkind_field('page-field-title');
 
 				<?php
 					if (is_page() && !is_front_page() && !is_404()) {
-						if ($page_title == true && !$hide_page_title) { ?>
+						if ($page_title == true) { ?>
 							<h2 class="page-title"><?php the_title(); ?></h2> <?php
 						}
 						if ($page_thumb == true) { ?>

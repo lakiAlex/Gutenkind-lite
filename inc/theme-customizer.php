@@ -97,24 +97,6 @@ if (class_exists('kirki')) {
 	    ),
 	) );
 
-	// Header Style
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'select',
-		'settings'    => 'header-style',
-		'label'       => esc_html__( 'Header Style', 'gutenkind' ),
-		'section'     => 'header_section',
-		'default'     => '1',
-		'choices'     => array(
-			'1' 		=> esc_html__( 'Header 1', 'gutenkind' ),
-			'2' 		=> esc_html__( 'Header 2', 'gutenkind' ),
-			'3' 		=> esc_html__( 'Header 3', 'gutenkind' ),
-			'4' 		=> esc_html__( 'Header 4', 'gutenkind' ),
-			'5' 		=> esc_html__( 'Header 5', 'gutenkind' ),
-			'6' 		=> esc_html__( 'Header 6', 'gutenkind' ),
-			'7' 		=> esc_html__( 'Header 7', 'gutenkind' ),
-		),
-	) );
-
 	// Logo
 	Kirki::add_field( 'theme_mod', array(
 		'type'        => 'toggle',
@@ -138,27 +120,6 @@ if (class_exists('kirki')) {
 	        array(
 	            'setting'  => 'show_header_logo',
 	            'value'    => '1',
-	            'operator' => '=='
-	        ),
-	    ),
-	) );
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'toggle',
-		'settings'    => 'header_show_tagline',
-		'label'       => esc_html__( 'Show Tagline', 'gutenkind' ),
-		'description' => esc_html__( 'To change your Site Title and Tagline, navigate to Customizer > Site Indentity section.', 'gutenkind' ),
-		'section'     => 'header_section',
-		'default'     => true,
-		'required' => array(
-	        array(
-	            'setting'  => 'show_header_logo',
-	            'value'    => true,
-	            'operator' => '=='
-	        ),
-			array(
-	            'setting'  => 'header-style',
-	            'value'    => '2',
 	            'operator' => '=='
 	        ),
 	    ),
@@ -358,34 +319,6 @@ if (class_exists('kirki')) {
 		'theme_supports' => '',
 	) );
 
-	// Options
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'radio-image',
-		'settings'    => 'archive-page-layout',
-		'label'       => esc_html__( 'Archives Layout', 'gutenkind' ),
-		'section'     => 'archive_settings',
-		'default'     => 'masonry',
-		'choices'     => array(
-			'list'   			=> get_template_directory_uri() . '/dist/img/layout/list.png',
-			'grid' 		    	=> get_template_directory_uri() . '/dist/img/layout/grid.png',
-			'masonry' 		    => get_template_directory_uri() . '/dist/img/layout/masonry.png',
-			'standard'  		=> get_template_directory_uri() . '/dist/img/layout/standard.png',
-		),
-	));
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'radio-image',
-		'settings'    => 'archive-page-sidebar',
-		'label'       => esc_html__( 'Archives Sidebar', 'gutenkind' ),
-		'section'     => 'archive_settings',
-		'default'     => 'none',
-		'choices'     => array(
-			'left'   			=> get_template_directory_uri() . '/dist/img/layout/sidebar-left.png',
-			'none' 		    	=> get_template_directory_uri() . '/dist/img/layout/sidebar-none.png',
-			'right' 		    => get_template_directory_uri() . '/dist/img/layout/sidebar-right.png',
-		),
-	));
-
 	Kirki::add_field( 'theme_mod', array(
 		'type'        => 'toggle',
 		'settings'    => 'archive-page-cat-list',
@@ -428,46 +361,6 @@ if (class_exists('kirki')) {
 
 	Kirki::add_field( 'theme_mod', array(
 		'type'        => 'toggle',
-		'settings'    => 'archive-page-author',
-		'label'       => esc_html__( 'Post Author', 'gutenkind' ),
-		'section'     => 'archive_settings',
-		'default'     => false,
-	) );
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'toggle',
-		'settings'    => 'archive-page-date',
-		'label'       => esc_html__( 'Post Date', 'gutenkind' ),
-		'section'     => 'archive_settings',
-		'default'     => false,
-	) );
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'toggle',
-		'settings'    => 'archive-page-comments',
-		'label'       => esc_html__( 'Post Comments', 'gutenkind' ),
-		'section'     => 'archive_settings',
-		'default'     => false,
-	) );
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'toggle',
-		'settings'    => 'archive-page-views',
-		'label'       => esc_html__( 'Post Views', 'gutenkind' ),
-		'section'     => 'archive_settings',
-		'default'     => false,
-	) );
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'toggle',
-		'settings'    => 'archive-page-read',
-		'label'       => esc_html__( 'Post Read Time', 'gutenkind' ),
-		'section'     => 'archive_settings',
-		'default'     => false,
-	) );
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'toggle',
 		'settings'    => 'archive-page-excerpt',
 		'label'       => esc_html__( 'Post Excerpt', 'gutenkind' ),
 		'section'     => 'archive_settings',
@@ -500,18 +393,6 @@ if (class_exists('kirki')) {
 		'label'       => esc_html__( 'Read More Button', 'gutenkind' ),
 		'section'     => 'archive_settings',
 		'default'     => true,
-	) );
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'radio',
-		'settings'    => 'archive-page-more-style',
-		'label'       => esc_html__( 'Read More Style', 'gutenkind' ),
-		'section'     => 'archive_settings',
-		'default'     => 'link',
-		'choices'     => array(
-			'link' 		=> esc_html__( 'Link', 'gutenkind' ),
-			'button' 		=> esc_html__( 'Button', 'gutenkind' ),
-		),
 	) );
 
 	Kirki::add_field( 'theme_mod', array(
@@ -552,20 +433,6 @@ if (class_exists('kirki')) {
 			'right' 		    => get_template_directory_uri() . '/dist/img/layout/sidebar-right.png',
 		),
 	));
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'select',
-		'settings'    => 'single-header-type',
-		'label'       => esc_html__( 'Post Header Type', 'gutenkind' ),
-		'section'     => 'post_settings',
-		'default'     => 'standard',
-		'choices'     => array(
-			'standard' 		=> esc_html__( 'Standard', 'gutenkind' ),
-			'wrapped' 		=> esc_html__( 'Wrapped', 'gutenkind' ),
-			'fullwidth' 	=> esc_html__( 'Fullwidth', 'gutenkind' ),
-			'fullscreen' 	=> esc_html__( 'Fullscreen', 'gutenkind' ),
-		),
-	) );
 
 	Kirki::add_field( 'theme_mod', array(
 		'type'        => 'toggle',
@@ -617,14 +484,6 @@ if (class_exists('kirki')) {
 
 	Kirki::add_field( 'theme_mod', array(
 		'type'        => 'toggle',
-		'settings'    => 'single-author-bio',
-		'label'       => esc_html__( 'Show Author Bio', 'gutenkind' ),
-		'section'     => 'post_settings',
-		'default'     => true,
-	));
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'toggle',
 		'settings'    => 'single-nav',
 		'label'       => esc_html__( 'Show Navigation', 'gutenkind' ),
 		'section'     => 'post_settings',
@@ -645,14 +504,6 @@ if (class_exists('kirki')) {
 		'label'       => esc_html__( 'Show Comments Form', 'gutenkind' ),
 		'section'     => 'post_settings',
 		'default'     => true,
-	) );
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'toggle',
-		'settings'    => 'single-infinite',
-		'label'       => esc_html__( 'Infinite Post Loading', 'gutenkind' ),
-		'section'     => 'post_settings',
-		'default'     => false,
 	) );
 
 	/*--------------------------------------------------------------
@@ -697,7 +548,7 @@ if (class_exists('kirki')) {
 			array(
 				'element'  => '.page-container',
 				'property' => 'margin-top',
-				'units'    => 'px',
+				'units'       => 'px !important',
 			),
 		),
 	) );
@@ -717,20 +568,10 @@ if (class_exists('kirki')) {
 			array(
 				'element'  => '.page-container',
 				'property' => 'margin-bottom',
-				'units'    => 'px',
+				'units'       => 'px !important',
 			),
 		),
 	) );
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'toggle',
-		'settings'    => 'page-dev-sidebar',
-		'label'       => esc_html__('Dev Sidebar', 'gutenkind'),
-		'section'     => 'page_settings',
-		'default'     => false,
-	) );
-
-
 
 	/*--------------------------------------------------------------
 	# Social Media Settings
@@ -895,519 +736,6 @@ if (class_exists('kirki')) {
 		'section'     => 'social_media_settings',
 		'priority'    => 1,
 	) );
-
-
-	/*--------------------------------------------------------------
-	# Typography Settings
-	--------------------------------------------------------------*/
-
-	// Panel
-	Kirki::add_panel( 'typo_settings', array(
-		'priority'    => 2,
-		'title'       => esc_html__( 'Typography Settings', 'gutenkind' ),
-	));
-
-	/*--------------------------------------------------------------
-	# Fonts
-	--------------------------------------------------------------*/
-
-	// Section
-	Kirki::add_section( 'typo_fonts', array(
-		'priority'    => 1,
-		'title'       => esc_html__( 'Fonts', 'gutenkind' ),
-		'panel'       => 'typo_settings',
-	));
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'typography',
-		'settings'    => 'typo-font-1',
-		'label'       => esc_html__( 'Primary Font', 'gutenkind' ),
-		'section'     => 'typo_fonts',
-		'transport' => 'auto',
-
-		'default'     => array(
-			'font-family'    => '',
-			'variant'        => '',
-		),
-		'output'      => array(
-			array(
-				'element' => 'body, .block__title-sm h4, .woocommerce-checkout .woocommerce #ship-to-different-address, .woocommerce.single div.product .related.products > h2, .woocommerce-page.single div.product .related.products > h2',
-			),
-		),
-	));
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'typography',
-		'settings'    => 'typo-font-2',
-		'label'       => esc_html__( 'Secondary Font', 'gutenkind' ),
-		'section'     => 'typo_fonts',
-		'transport' => 'auto',
-
-		'default'     => array(
-			'font-family'    => '',
-			'variant'        => '',
-		),
-		'output'      => array(
-			array(
-				'element' => 'h1, h2, h3, h4, h5, h6, .header .search__inner .search__input, .header .main-menu .menu .voss-mega-menu > ul > li > a, .woocommerce.single div.product .entry-summary .price, .woocommerce-page.single div.product .entry-summary .price',
-			),
-		),
-	));
-
-	/*--------------------------------------------------------------
-	# General
-	--------------------------------------------------------------*/
-
-	// Section
-	Kirki::add_section( 'typo_general', array(
-		'priority'    => 1,
-		'title'       => esc_html__( 'General', 'gutenkind' ),
-		'panel'       => 'typo_settings',
-	));
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'typography',
-		'settings'    => 'typo_body',
-		'label'       => esc_html__( 'Body', 'gutenkind' ),
-		'section'     => 'typo_general',
-		'transport' => 'auto',
-
-		'default'     => array(
-			'font-size'      => '16px',
-			'line-height'    => '1.66',
-		),
-		'priority'    => 1,
-		'output'      => array(
-			array(
-				'element' => 'body',
-			),
-		),
-	));
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'typography',
-		'settings'    => 'typo_h1',
-		'label'       => esc_html__( 'Heading 1', 'gutenkind' ),
-		'section'     => 'typo_general',
-		'transport' => 'auto',
-
-		'default'     => array(
-			'font-size'      => '40px',
-			'line-height'    => '50px',
-
-		),
-		'priority'    => 1,
-		'output'      => array(
-			array(
-				'element' => 'h1',
-				'media_query' => '@media (min-width: 992px)',
-			),
-		),
-	));
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'typography',
-		'settings'    => 'typo_h2',
-		'label'       => esc_html__( 'Heading 2', 'gutenkind' ),
-		'section'     => 'typo_general',
-		'transport' => 'auto',
-
-		'default'     => array(
-			'font-size'      => '34px',
-			'line-height'    => '1.2',
-			'media_query' => '@media (min-width: 992px)',
-		),
-		'priority'    => 1,
-		'output'      => array(
-			array(
-				'element' => 'h2',
-			),
-		),
-	));
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'typography',
-		'settings'    => 'typo_h3',
-		'label'       => esc_html__( 'Heading 3', 'gutenkind' ),
-		'section'     => 'typo_general',
-		'transport' => 'auto',
-
-		'default'     => array(
-			'font-size'      => '28px',
-			'line-height'    => '41px',
-			'media_query' => '@media (min-width: 992px)',
-		),
-		'priority'    => 1,
-		'output'      => array(
-			array(
-				'element' => 'h3',
-			),
-		),
-	));
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'typography',
-		'settings'    => 'typo_h4',
-		'label'       => esc_html__( 'Heading 4', 'gutenkind' ),
-		'section'     => 'typo_general',
-		'transport' => 'auto',
-
-		'default'     => array(
-			'font-size'      => '18px',
-			'line-height'    => '28px',
-			'media_query' => '@media (min-width: 992px)',
-		),
-		'priority'    => 1,
-		'output'      => array(
-			array(
-				'element' => 'h4',
-			),
-		),
-	));
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'typography',
-		'settings'    => 'typo_h5',
-		'label'       => esc_html__( 'Heading 5', 'gutenkind' ),
-		'section'     => 'typo_general',
-		'transport' => 'auto',
-
-		'default'     => array(
-			'font-size'      => '17px',
-			'line-height'    => '27px',
-			'media_query' => '@media (min-width: 992px)',
-		),
-		'priority'    => 1,
-		'output'      => array(
-			array(
-				'element' => 'h5',
-			),
-		),
-	));
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'typography',
-		'settings'    => 'typo_h6',
-		'label'       => esc_html__( 'Heading 6', 'gutenkind' ),
-		'section'     => 'typo_general',
-		'transport' => 'auto',
-
-		'default'     => array(
-			'font-size'      => '15px',
-			'line-height'    => '25px',
-			'media_query' => '@media (min-width: 992px)',
-		),
-		'priority'    => 1,
-		'output'      => array(
-			array(
-				'element' => 'h6',
-			),
-		),
-	));
-
-	/*--------------------------------------------------------------
-	## Header
-	--------------------------------------------------------------*/
-	// Section
-	Kirki::add_section( 'typo_header', array(
-		'priority'    => 1,
-		'title'       => esc_html__( 'Header', 'gutenkind' ),
-		'panel'       => 'typo_settings',
-	));
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'typography',
-		'settings'    => 'typo_menu',
-		'label'       => esc_html__( 'Menu', 'gutenkind' ),
-		'section'     => 'typo_header',
-		'transport' => 'auto',
-
-		'default'     => array(
-			'font-size'      => '10px',
-			'line-height'    => '20px',
-		),
-		'priority'    => 1,
-		'output'      => array(
-			array(
-				'element' => '.header .main-menu .menu li a',
-				'media_query' => '@media (min-width: 992px)',
-			),
-		),
-	));
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'typography',
-		'settings'    => 'typo_submenu',
-		'label'       => esc_html__( 'Sub-Menu', 'gutenkind' ),
-		'section'     => 'typo_header',
-		'transport' => 'auto',
-
-		'default'     => array(
-			'font-size'      => '10px',
-			'line-height'    => '20px',
-		),
-		'priority'    => 1,
-		'output'      => array(
-			array(
-				'element' => '.header .main-menu .menu .sub-menu a',
-				'media_query' => '@media (min-width: 992px)',
-			),
-		),
-	));
-
-	/*--------------------------------------------------------------
-	## Buttons
-	--------------------------------------------------------------*/
-	// Section
-	Kirki::add_section( 'typo_buttons', array(
-		'priority'    => 1,
-		'title'       => esc_html__( 'Buttons & Links', 'gutenkind' ),
-		'panel'       => 'typo_settings',
-	));
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'radio',
-		'settings'    => 'button_style',
-		'label'       => esc_html__( 'Button Style:', 'gutenkind' ),
-		'section'     => 'typo_buttons',
-		'transport' => 'auto',
-
-		'default'     => '1',
-		'priority'    => 1,
-		'choices'     => array(
-			'1'     => esc_html__( 'Square', 'gutenkind' ),
-			'2'     => esc_html__( 'Round', 'gutenkind' ),
-		),
-		'output'      => array(
-			array(
-				'element'       => 'input[type="button"], input[type="reset"], input[type="submit"], .button, a.button, .btn, input.btn, .woocommerce button.button, .woocommerce button.button.alt,button,.wpcf7-submit',
-				'property'      => 'border-radius',
-				'exclude'       => array( 1, '1' ),
-				'value_pattern' => '100px !important',
-			),
-		),
-	) );
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'typography',
-		'settings'    => 'typo_button',
-		'label'       => esc_html__( 'Button', 'gutenkind' ),
-		'section'     => 'typo_buttons',
-		'transport' => 'auto',
-
-		'default'     => array(
-			'font-size'      => '11px',
-			'line-height'    => '34px',
-		),
-		'priority'    => 1,
-		'output'      => array(
-			array(
-				'element'       => 'input[type="button"], input[type="reset"], input[type="submit"], .button, a.button, .btn, input.btn, .woocommerce button.button, .woocommerce button.button.alt,button,.wpcf7-submit',
-			),
-		),
-	));
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'typography',
-		'settings'    => 'typo_links_read',
-		'label'       => esc_html__( 'Read More Link', 'gutenkind' ),
-		'section'     => 'typo_buttons',
-		'transport' => 'auto',
-
-		'default'     => array(
-			'font-size'      => '10.1px',
-			'line-height'    => '13px',
-		),
-		'priority'    => 1,
-		'output'      => array(
-			array(
-				'element' => '.post-more.link',
-			),
-		),
-	));
-
-	/*--------------------------------------------------------------
-	## Posts
-	--------------------------------------------------------------*/
-	// Section
-	Kirki::add_section( 'typo_posts', array(
-		'priority'    => 1,
-		'title'       => esc_html__( 'Posts', 'gutenkind' ),
-		'panel'       => 'typo_settings',
-	));
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'typography',
-		'settings'    => 'typo_post_cat',
-		'label'       => esc_html__( 'Category Link', 'gutenkind' ),
-		'section'     => 'typo_posts',
-		'transport' => 'auto',
-
-		'default'     => array(
-			'font-size'      	=> '9.1px',
-			'line-height'    => '12px',
-		),
-		'priority'    => 1,
-		'output'      => array(
-			array(
-				'element' => '.meta-cat a',
-			),
-		),
-	));
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'typography',
-		'settings'    => 'typo_posts_meta',
-		'label'       => esc_html__( 'Post Meta', 'gutenkind' ),
-		'section'     => 'typo_posts',
-		'transport' => 'auto',
-
-		'default'     => array(
-			'font-size'      => '9.1px',
-			'line-height'    => '21px',
-		),
-		'priority'    => 1,
-		'output'      => array(
-			array(
-				'element' => '.entry-meta > span',
-			),
-		),
-	));
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'typography',
-		'settings'    => 'typo_paragraph',
-		'label'       => esc_html__( 'Paragraphs', 'gutenkind' ),
-		'section'     => 'typo_posts',
-		'transport' => 'auto',
-
-		'default'     => array(
-			'font-size'      => '16px',
-			'line-height'    => '1.66',
-		),
-		'priority'    => 1,
-		'output'      => array(
-			array(
-				'element' => 'p',
-				'media_query' => '@media (min-width: 1024px)',
-			),
-		),
-	));
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'typography',
-		'settings'    => 'typo_excerpt',
-		'label'       => esc_html__( 'Excerpt', 'gutenkind' ),
-		'section'     => 'typo_posts',
-		'transport' => 'auto',
-
-		'default'     => array(
-			'font-size'      => '15px',
-			'line-height'    => '1.66',  //27px
-		),
-		'priority'    => 1,
-		'output'      => array(
-			array(
-				'element' => '.post-content .post-excerpt',
-			),
-		),
-	));
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'typography',
-		'settings'    => 'typo_posts_quote',
-		'label'       => esc_html__( 'Quotes', 'gutenkind' ),
-		'section'     => 'typo_posts',
-		'transport' => 'auto',
-
-		'default'     => array(
-			'font-size'      => '18px',
-			'line-height'    => '1.8',
-		),
-		'priority'    => 1,
-		'output'      => array(
-			array(
-				'element' => '.entry-content .wp-block-quote p',
-			),
-		),
-	));
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'typography',
-		'settings'    => 'typo_posts_tags',
-		'label'       => esc_html__( 'Tags', 'gutenkind' ),
-		'section'     => 'typo_posts',
-		'transport' => 'auto',
-
-		'default'     => array(
-			'font-size'      => '9.1px',
-			'line-height'    => '12px',
-		),
-		'priority'    => 1,
-		'output'      => array(
-			array(
-				'element' => '.single .tags-links a',
-			),
-		),
-	));
-
-	/*--------------------------------------------------------------
-	## Widgets
-	--------------------------------------------------------------*/
-	// Section
-	Kirki::add_section( 'typo_widgets', array(
-		'priority'    => 1,
-		'title'       => esc_html__( 'Widgets', 'gutenkind' ),
-		'panel'       => 'typo_settings',
-	));
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'typography',
-		'settings'    => 'typo_widget_title',
-		'label'       => esc_html__( 'Widget Title', 'gutenkind' ),
-		'section'     => 'typo_widgets',
-		'transport' => 'auto',
-
-		'default'     => array(
-			'font-size'      => '22px',
-			'line-height'    => '27px',
-		),
-		'priority'    => 1,
-		'output'      => array(
-			array(
-				'element' => '.widget .widget-title',
-			),
-		),
-	));
-
-	/*--------------------------------------------------------------
-	## Footer
-	--------------------------------------------------------------*/
-	// Section
-	Kirki::add_section( 'typo_footer', array(
-		'priority'    => 1,
-		'title'       => esc_html__( 'Footer', 'gutenkind' ),
-		'panel'       => 'typo_settings',
-	));
-
-	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'typography',
-		'settings'    => 'typo_footer_info',
-		'label'       => esc_html__( 'Footer Info', 'gutenkind' ),
-		'section'     => 'typo_footer',
-		'transport' => 'auto',
-
-		'default'     => array(
-			'font-size'      => '12.8px',
-			'line-height'    => '1.66',
-		),
-		'priority'    => 1,
-		'output'      => array(
-			array(
-				'element' => '.footer .footer__copyright > div p, .footer .footer__copyright > div a',
-			),
-		),
-	));
 
 	/*--------------------------------------------------------------
 	# Color Settings
@@ -1611,7 +939,6 @@ if (class_exists('kirki')) {
 		),
 	));
 
-
 	Kirki::add_field( 'theme_mod', array(
 		'type'        => 'color',
 		'settings'    => 'color_menu_arrow',
@@ -1744,9 +1071,9 @@ if (class_exists('kirki')) {
 			),
 		),
 	));
-
+	
 	Kirki::add_field( 'theme_mod', array(
-		'type'        => 'multicolor',
+		'type'        => 'color',
 		'settings'    => 'color_posts_title',
 		'label'       => esc_html__( 'Post Title', 'gutenkind' ),
 		'section'     => 'color_posts',
@@ -2095,9 +1422,6 @@ if (class_exists('kirki')) {
 	    ),
 	) );
 
-
-
-
 	Kirki::add_field( 'theme_mod', array(
 		'type'        => 'toggle',
 		'settings'    => 'footer_instagram',
@@ -2112,7 +1436,7 @@ if (class_exists('kirki')) {
 		'label'       => esc_html__( 'Instagram Username', 'gutenkind' ),
 		'description' => esc_html__('Make sure your Instagram account is set on "Public" in order for feed to display.', 'gutenkind'),
 		'section'     => 'footer_settings',
-		'default'     => esc_html__( 'codezeit', 'gutenkind' ),
+		'default'     => esc_html__( 'mija_mija', 'gutenkind' ),
 		'required' => array(
 	        array(
 	            'setting'  => 'footer_instagram',

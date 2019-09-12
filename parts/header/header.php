@@ -3,8 +3,6 @@
 $show_logo			= get_theme_mod('show_header_logo', true);
 $logo_type			= get_theme_mod('header_logo_type', 'text');
 $logo_img			= get_theme_mod('header_logo_img', get_template_directory_uri() .'/dist/img/logo-dark.png');
-$show_tagline		= get_theme_mod('footer_show_tagline', false);
-
 $header_social		= get_theme_mod('header-social', true);
 
 ?>
@@ -23,7 +21,6 @@ $header_social		= get_theme_mod('header-social', true);
 					<img src="<?php echo esc_url($logo_img); ?>" alt="<?php esc_attr(bloginfo( 'name' )); ?>"/>
 				<?php } else { ?>
 					<h1><?php bloginfo('name'); ?></h1>
-					<?php if ($show_tagline == true) bloginfo('description'); ?>
 				<?php } ?>
 			</a>
 		<?php } ?>

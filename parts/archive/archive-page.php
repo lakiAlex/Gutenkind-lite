@@ -7,16 +7,9 @@ $nav 			= get_theme_mod('archive-page-nav', 'load');
 $featured 		= get_theme_mod('archive-page-featured', true);
 $thumb 			= get_theme_mod('archive-page-thumb', true);
 $cat_link 		= get_theme_mod('archive-page-cat-link', true);
-$author 		= get_theme_mod('archive-page-author', false);
-$date 			= get_theme_mod('archive-page-date', false);
-$views 			= get_theme_mod('archive-page-views', false);
-$read_time 		= get_theme_mod('archive-page-read', false);
-$comments 		= get_theme_mod('archive-page-comments', false);
 $excerpt 		= get_theme_mod('archive-page-excerpt', true);
-$excerpt_length = get_theme_mod('archive-page-excerpt-length', '5');
+$excerpt_length = get_theme_mod('archive-page-excerpt-length', '6');
 $more 			= get_theme_mod('archive-page-more', true);
-$more_style 	= get_theme_mod('archive-page-more-style', 'link');
-$more_text 		= get_theme_mod('archive-page-more-text', esc_html__('Read More', 'gutenkind'));
 
 $classes[] = 'voss-ajax-'.$nav;
 $classes[] = 'voss-sidebar-'.$sidebar;
@@ -63,10 +56,16 @@ $i = 0;
 	                        		}
 	                            ?>
 								<div class="post-content">
-									<?php if (function_exists('gutenkind_meta_cat')) gutenkind_meta_cat(); ?>
+									<?php if (function_exists('gutenkind_meta_cat') && $cat_link == true) gutenkind_meta_cat(); ?>
 									<h3 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-									<?php gutenkind_excerpt('7'); ?>
-									<a class="post-more link" href="<?php echo esc_url(get_permalink()); ?>"><?php esc_html_e('Read More', 'gutenkind'); ?></a>
+									<?php 
+										if ($excerpt == true) gutenkind_excerpt($excerpt_length); 
+										if ($more == true) { ?>
+											<a class="post-more link" href="<?php echo esc_url(get_permalink()); ?>">
+												<?php esc_html_e('Read More', 'gutenkind'); ?>
+											</a><?php
+										}
+									?>
 								</div>
 	                        </article><?php
 
