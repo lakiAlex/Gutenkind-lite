@@ -1,0 +1,744 @@
+# Copyright (C) 2019 gutenkind-lite
+# This file is distributed under the same license as the gutenkind-lite package.
+msgid ""
+msgstr ""
+"Project-Id-Version: gutenkind-lite\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: comments.php:13
+msgid "Show Comments +"
+msgstr ""
+
+#: comments.php:14
+msgid "Hide Comments -"
+msgstr ""
+
+#: comments.php:25
+msgid "Join the Discussion"
+msgstr ""
+
+#: comments.php:27
+msgid "Leave a Comment"
+msgstr ""
+
+#: comments.php:30
+msgid "Comments are closed"
+msgstr ""
+
+#: comments.php:37
+msgid "%d Response"
+msgid_plural "%d Responses"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:39
+msgid "No Comments"
+msgstr ""
+
+#: functions.php:49
+msgid "Header Menu"
+msgstr ""
+
+#: functions.php:50, inc/theme-customizer.php:1766
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:128
+msgid "Click here to create your header menu."
+msgstr ""
+
+#: functions.php:154
+msgid "Click here to create your footer menu."
+msgstr ""
+
+#: functions.php:165
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:167
+msgid "Add widgets here to appear in your sidebar."
+msgstr ""
+
+#: functions.php:176
+msgid "Footer Column 1"
+msgstr ""
+
+#: functions.php:178
+msgid "Add widgets here to appear in your left footer column."
+msgstr ""
+
+#: functions.php:187
+msgid "Footer Column 2"
+msgstr ""
+
+#: functions.php:189
+msgid "Add widgets here to appear in your center footer column."
+msgstr ""
+
+#: functions.php:198
+msgid "Footer Column 3"
+msgstr ""
+
+#: functions.php:200
+msgid "Add widgets here to appear in your right footer column."
+msgstr ""
+
+#: image.php:18, parts/content/content-page.php:8, parts/content/content-single.php:45
+msgid "Pages:"
+msgstr ""
+
+#: search.php:26, parts/archive/archive-featured.php:38, parts/archive/archive-page.php:65, parts/content/content-trending.php:37
+msgid "Read More"
+msgstr ""
+
+#: searchform.php:4
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:7
+msgid "What are you looking for?"
+msgstr ""
+
+#: searchform.php:13
+msgid "Input your search keywords and press enter."
+msgstr ""
+
+#: inc/theme-customizer.php:30
+msgid "Show Top Carousel"
+msgstr ""
+
+#: inc/theme-customizer.php:38
+msgid "Show Trending Posts"
+msgstr ""
+
+#: inc/theme-customizer.php:46
+msgid "Show Latest Posts"
+msgstr ""
+
+#: inc/theme-customizer.php:54
+msgid "Show Popular Posts"
+msgstr ""
+
+#: inc/theme-customizer.php:66
+msgid "Header & Logo"
+msgstr ""
+
+#: inc/theme-customizer.php:74
+msgid "Show Ad Bar"
+msgstr ""
+
+#: inc/theme-customizer.php:82
+msgid "Ad Type"
+msgstr ""
+
+#: inc/theme-customizer.php:86, inc/theme-customizer.php:154, inc/theme-customizer.php:1606
+msgid "Image"
+msgstr ""
+
+#: inc/theme-customizer.php:87
+msgid "Code"
+msgstr ""
+
+#: inc/theme-customizer.php:101
+msgid "Ad Image"
+msgstr ""
+
+#: inc/theme-customizer.php:121
+msgid "Ad Code"
+msgstr ""
+
+#: inc/theme-customizer.php:142
+msgid "Header Logo"
+msgstr ""
+
+#: inc/theme-customizer.php:150, inc/theme-customizer.php:1602
+msgid "Logo Type"
+msgstr ""
+
+#: inc/theme-customizer.php:155, inc/theme-customizer.php:1372, inc/theme-customizer.php:1607
+msgid "Text"
+msgstr ""
+
+#: inc/theme-customizer.php:169, inc/theme-customizer.php:1621
+msgid "Logo Image"
+msgstr ""
+
+#: inc/theme-customizer.php:189, inc/theme-customizer.php:246
+msgid "Adjust Logo Size"
+msgstr ""
+
+#: inc/theme-customizer.php:209
+msgid "Logo Width"
+msgstr ""
+
+#: inc/theme-customizer.php:266, inc/theme-customizer.php:1694
+msgid "Logo Text Size"
+msgstr ""
+
+#: inc/theme-customizer.php:304
+msgid "Adjust Logo Spacing"
+msgstr ""
+
+#: inc/theme-customizer.php:319
+msgid "Logo spacing"
+msgstr ""
+
+#: inc/theme-customizer.php:353
+msgid "Archive Settings"
+msgstr ""
+
+#: inc/theme-customizer.php:363
+msgid "Category List"
+msgstr ""
+
+#: inc/theme-customizer.php:371
+msgid "Tag List"
+msgstr ""
+
+#: inc/theme-customizer.php:379
+msgid "Show Featured Post"
+msgstr ""
+
+#: inc/theme-customizer.php:387
+msgid "Post Thumbnail"
+msgstr ""
+
+#: inc/theme-customizer.php:395
+msgid "Post Category Link"
+msgstr ""
+
+#: inc/theme-customizer.php:403
+msgid "Post Excerpt"
+msgstr ""
+
+#: inc/theme-customizer.php:411
+msgid "Excerpt Length"
+msgstr ""
+
+#: inc/theme-customizer.php:431
+msgid "Read More Button"
+msgstr ""
+
+#: inc/theme-customizer.php:439
+msgid "Pagination"
+msgstr ""
+
+#: inc/theme-customizer.php:443
+msgid "Numeric"
+msgstr ""
+
+#: inc/theme-customizer.php:444
+msgid "Links"
+msgstr ""
+
+#: inc/theme-customizer.php:445
+msgid "Buttons"
+msgstr ""
+
+#: inc/theme-customizer.php:446
+msgid "Load More Button"
+msgstr ""
+
+#: inc/theme-customizer.php:447
+msgid "Infinite Scroll"
+msgstr ""
+
+#: inc/theme-customizer.php:457
+msgid "Post Settings"
+msgstr ""
+
+#: inc/theme-customizer.php:465
+msgid "Post Sidebar"
+msgstr ""
+
+#: inc/theme-customizer.php:478
+msgid "Show Category Link"
+msgstr ""
+
+#: inc/theme-customizer.php:486
+msgid "Show Author"
+msgstr ""
+
+#: inc/theme-customizer.php:494
+msgid "Show Date"
+msgstr ""
+
+#: inc/theme-customizer.php:502
+msgid "Show Comments Link"
+msgstr ""
+
+#: inc/theme-customizer.php:510
+msgid "Show Featured Image"
+msgstr ""
+
+#: inc/theme-customizer.php:518
+msgid "Show Tags"
+msgstr ""
+
+#: inc/theme-customizer.php:526
+msgid "Show Navigation"
+msgstr ""
+
+#: inc/theme-customizer.php:534
+msgid "Show Related Posts"
+msgstr ""
+
+#: inc/theme-customizer.php:542
+msgid "Show Comments Form"
+msgstr ""
+
+#: inc/theme-customizer.php:553
+msgid "Page Settings"
+msgstr ""
+
+#: inc/theme-customizer.php:561
+msgid "Page Title"
+msgstr ""
+
+#: inc/theme-customizer.php:569
+msgid "Featured Image"
+msgstr ""
+
+#: inc/theme-customizer.php:577
+msgid "Spacing Top"
+msgstr ""
+
+#: inc/theme-customizer.php:597
+msgid "Spacing Bottom"
+msgstr ""
+
+#: inc/theme-customizer.php:620
+msgid "Social Media Settings"
+msgstr ""
+
+#: inc/theme-customizer.php:784
+msgid "Color Settings"
+msgstr ""
+
+#: inc/theme-customizer.php:790
+msgid "General"
+msgstr ""
+
+#: inc/theme-customizer.php:797
+msgid "Body Background"
+msgstr ""
+
+#: inc/theme-customizer.php:812
+msgid "Buttons Color"
+msgstr ""
+
+#: inc/theme-customizer.php:816, inc/theme-customizer.php:927, inc/theme-customizer.php:957, inc/theme-customizer.php:1003, inc/theme-customizer.php:1064, inc/theme-customizer.php:1092, inc/theme-customizer.php:1136, inc/theme-customizer.php:1192, inc/theme-customizer.php:1220, inc/theme-customizer.php:1281, inc/theme-customizer.php:1348
+msgid "Default"
+msgstr ""
+
+#: inc/theme-customizer.php:817, inc/theme-customizer.php:928, inc/theme-customizer.php:958, inc/theme-customizer.php:1004, inc/theme-customizer.php:1065, inc/theme-customizer.php:1093, inc/theme-customizer.php:1137, inc/theme-customizer.php:1193, inc/theme-customizer.php:1221, inc/theme-customizer.php:1282, inc/theme-customizer.php:1349
+msgid "Hover"
+msgstr ""
+
+#: inc/theme-customizer.php:843
+msgid "Headings"
+msgstr ""
+
+#: inc/theme-customizer.php:850
+msgid "Headings Color"
+msgstr ""
+
+#: inc/theme-customizer.php:868
+msgid "Header"
+msgstr ""
+
+#: inc/theme-customizer.php:875
+msgid "Topbar Background Color"
+msgstr ""
+
+#: inc/theme-customizer.php:890
+msgid "Topbar Text Color"
+msgstr ""
+
+#: inc/theme-customizer.php:905, inc/theme-customizer.php:1330
+msgid "Background Color"
+msgstr ""
+
+#: inc/theme-customizer.php:923
+msgid "Menu Color"
+msgstr ""
+
+#: inc/theme-customizer.php:953
+msgid "Menu Stroke"
+msgstr ""
+
+#: inc/theme-customizer.php:983
+msgid "Menu Arrow Color"
+msgstr ""
+
+#: inc/theme-customizer.php:999
+msgid "Icons Color"
+msgstr ""
+
+#: inc/theme-customizer.php:1053
+msgid "Posts"
+msgstr ""
+
+#: inc/theme-customizer.php:1060
+msgid "Category Link Background"
+msgstr ""
+
+#: inc/theme-customizer.php:1088
+msgid "Category Link Text"
+msgstr ""
+
+#: inc/theme-customizer.php:1116
+msgid "Post Title"
+msgstr ""
+
+#: inc/theme-customizer.php:1132
+msgid "Post Meta"
+msgstr ""
+
+#: inc/theme-customizer.php:1160
+msgid "Excerpt"
+msgstr ""
+
+#: inc/theme-customizer.php:1174
+msgid "Paragraphs"
+msgstr ""
+
+#: inc/theme-customizer.php:1188
+msgid "Post Links"
+msgstr ""
+
+#: inc/theme-customizer.php:1216
+msgid "Post Links Border"
+msgstr ""
+
+#: inc/theme-customizer.php:1247
+msgid "Widgets"
+msgstr ""
+
+#: inc/theme-customizer.php:1254
+msgid "Widget Title"
+msgstr ""
+
+#: inc/theme-customizer.php:1271
+msgid "Slider"
+msgstr ""
+
+#: inc/theme-customizer.php:1278
+msgid "Slider Navigation"
+msgstr ""
+
+#: inc/theme-customizer.php:1305
+msgid "Slider Pagination"
+msgstr ""
+
+#: inc/theme-customizer.php:1322
+msgid "Footer"
+msgstr ""
+
+#: inc/theme-customizer.php:1344
+msgid "Social Icons"
+msgstr ""
+
+#: inc/theme-customizer.php:1386
+msgid "Logo Text"
+msgstr ""
+
+#: inc/theme-customizer.php:1400
+msgid "\"To Top\" Button"
+msgstr ""
+
+#: inc/theme-customizer.php:1414
+msgid "\"To Top\" Arrow"
+msgstr ""
+
+#: inc/theme-customizer.php:1432
+msgid "Footer Settings"
+msgstr ""
+
+#: inc/theme-customizer.php:1443
+msgid "Newsletter Form"
+msgstr ""
+
+#: inc/theme-customizer.php:1451
+msgid "Newsletter Heading"
+msgstr ""
+
+#: inc/theme-customizer.php:1453, parts/footer/footer.php:10
+msgid "Subscribe to our weekly newsletter"
+msgstr ""
+
+#: inc/theme-customizer.php:1466
+msgid "Instagram Feed"
+msgstr ""
+
+#: inc/theme-customizer.php:1474
+msgid "Instagram Username"
+msgstr ""
+
+#: inc/theme-customizer.php:1475
+msgid "Make sure your Instagram account is set on \"Public\" in order for feed to display."
+msgstr ""
+
+#: inc/theme-customizer.php:1477
+msgid "mija_mija"
+msgstr ""
+
+#: inc/theme-customizer.php:1490
+msgid "Instagram Likes"
+msgstr ""
+
+#: inc/theme-customizer.php:1505
+msgid "Instagram Comments"
+msgstr ""
+
+#: inc/theme-customizer.php:1520
+msgid "Instagram Description"
+msgstr ""
+
+#: inc/theme-customizer.php:1535
+msgid "Number of Photos: "
+msgstr ""
+
+#: inc/theme-customizer.php:1555
+msgid "Instagram Link Text"
+msgstr ""
+
+#: inc/theme-customizer.php:1557, parts/footer/footer.php:15
+msgid "@thegutenkind"
+msgstr ""
+
+#: inc/theme-customizer.php:1570
+msgid "Instagram Profile Link"
+msgstr ""
+
+#: inc/theme-customizer.php:1572, parts/footer/footer.php:14
+msgid "https://instagram.com/"
+msgstr ""
+
+#: inc/theme-customizer.php:1586
+msgid "Footer Logo"
+msgstr ""
+
+#: inc/theme-customizer.php:1641
+msgid "Logo Max Width"
+msgstr ""
+
+#: inc/theme-customizer.php:1673
+msgid "Tagline"
+msgstr ""
+
+#: inc/theme-customizer.php:1674
+msgid "To change your Site Title and Tagline, navigate to Customizer > Site Indentity section."
+msgstr ""
+
+#: inc/theme-customizer.php:1727
+msgid "Social Media"
+msgstr ""
+
+#: inc/theme-customizer.php:1728
+msgid "To change social media links, navigate to Customizer > Social Media Settings section."
+msgstr ""
+
+#: inc/theme-customizer.php:1736
+msgid "Footer Spacing"
+msgstr ""
+
+#: inc/theme-customizer.php:1757
+msgid "Copyright"
+msgstr ""
+
+#: inc/theme-customizer.php:1760
+msgid " - All Rights Reserved."
+msgstr ""
+
+#: inc/theme-customizer.php:1774
+msgid "Scroll to Top Button"
+msgstr ""
+
+#: inc/theme-customizer.php:1782
+msgid "Cookie Notice"
+msgstr ""
+
+#: inc/theme-customizer.php:1791
+msgid "Cookie Notice Text"
+msgstr ""
+
+#: inc/theme-customizer.php:1794
+msgid "Like most sites, we use cookies to ensure we provide you with the best experience. By clicking Accept, you are agreeing to our use of cookies."
+msgstr ""
+
+#: inc/theme-customizer.php:1807
+msgid "Cookie Notice Button"
+msgstr ""
+
+#: inc/theme-customizer.php:1809
+msgid "I accept use of cookies"
+msgstr ""
+
+#: inc/theme-functions.php:51
+msgid " "
+msgstr ""
+
+#: inc/theme-functions.php:68
+msgid "Posted by"
+msgstr ""
+
+#: inc/theme-functions.php:70
+msgid "by"
+msgstr ""
+
+#: inc/theme-functions.php:92
+msgid "Comment"
+msgstr ""
+
+#: inc/theme-functions.php:92
+msgid "Comments"
+msgstr ""
+
+#: inc/theme-functions.php:179, inc/theme-functions.php:188
+msgid "Older Posts"
+msgstr ""
+
+#: inc/theme-functions.php:182, inc/theme-functions.php:187
+msgid "Newer Posts"
+msgstr ""
+
+#: inc/theme-functions.php:193
+msgid "Previous"
+msgstr ""
+
+#: inc/theme-functions.php:194
+msgid "Next"
+msgstr ""
+
+#: inc/theme-functions.php:199, inc/theme-functions.php:200, inc/theme-functions.php:206, inc/theme-functions.php:207
+msgid "No More Posts"
+msgstr ""
+
+#: inc/theme-functions.php:202
+msgid "Load More"
+msgstr ""
+
+#: inc/theme-functions.php:222
+msgid "Tags:"
+msgstr ""
+
+#: inc/theme-setup/tgm-config.php:9
+msgid "Theme Options"
+msgstr ""
+
+#: parts/archive/archive-header.php:9
+msgid "Tag Archives"
+msgstr ""
+
+#: parts/archive/archive-header.php:11
+msgid "Author Archives"
+msgstr ""
+
+#: parts/archive/archive-header.php:13
+msgid "Search results for"
+msgstr ""
+
+#: parts/archive/archive-header.php:15
+msgid "Daily Archives"
+msgstr ""
+
+#: parts/archive/archive-header.php:17
+msgid "Montly Archives"
+msgstr ""
+
+#: parts/archive/archive-header.php:19
+msgid "Yearly Archives"
+msgstr ""
+
+#: parts/archive/archive-header.php:21
+msgid "Post Type Archives"
+msgstr ""
+
+#: parts/archive/archive-header.php:24
+msgid "%s Archives:"
+msgstr ""
+
+#: parts/archive/archive-header.php:47
+msgid "Archives"
+msgstr ""
+
+#: parts/content/content-latest.php:33
+msgid "Latest Stories"
+msgstr ""
+
+#: parts/content/content-latest.php:35, parts/content/content-popular.php:35
+msgid "View All"
+msgstr ""
+
+#: parts/content/content-none.php:5
+msgid "Nothing Found"
+msgstr ""
+
+#: parts/content/content-none.php:6
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: parts/content/content-none.php:8, parts/content/content-none.php:16, parts/content/content-none.php:23
+msgid "Back to Homepage"
+msgstr ""
+
+#: parts/content/content-none.php:13
+msgid "Hmm, That page can&rsquo;t be found."
+msgstr ""
+
+#: parts/content/content-none.php:14
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: parts/content/content-none.php:21
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: parts/content/content-popular.php:33
+msgid "Popular This Week"
+msgstr ""
+
+#: parts/content/content-sticky.php:17
+msgid "View Post"
+msgstr ""
+
+#: parts/content/content-trending.php:22
+msgid "Trending Posts"
+msgstr ""
+
+#: parts/footer/footer.php:16
+msgid ". All Rights Reserved."
+msgstr ""
+
+#: parts/footer/footer.php:35
+msgid "Please setup \"Mailchimp for WordPress\" plugin in order to display the form."
+msgstr ""
+
+#: parts/footer/footer.php:36
+msgid "Click here for more details."
+msgstr ""
+
+#: parts/header/header.php:33
+msgid "View your shopping cart"
+msgstr ""
+
+#: parts/post/post-nav.php:9
+msgid "Previous Reading"
+msgstr ""
+
+#: parts/post/post-nav.php:10
+msgid "Next Reading"
+msgstr ""
+
+#: parts/post/post-related.php:7
+msgid "Related Stories"
+msgstr ""

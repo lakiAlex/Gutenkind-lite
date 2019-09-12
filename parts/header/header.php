@@ -30,7 +30,7 @@ $header_social		= get_theme_mod('header-social', true);
 				if ($header_social == true && function_exists('gutenkind_social_media')) gutenkind_social_media();
 				if (function_exists('WC')) { ?>
 					<?php $count = WC()->cart->get_cart_contents_count(); ?>
-					<a class="header__cart" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php esc_html_e('View your shopping cart', 'gutenkind' ); ?>">
+					<a class="header__cart" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php esc_html_e('View your shopping cart', 'gutenkind-lite' ); ?>">
 						<?php get_template_part('/dist/svg/svg', 'cart'); ?>
 						<span class="header__cart-count"><?php $count > 0 ? esc_html($count) : '0'; ?></span>
 					</a> <?php

@@ -5,7 +5,7 @@
 function gutenkind_setup() {
 
 	// Theme available for translation/
-	load_theme_textdomain('gutenkind', get_template_directory() . '/lang');
+	load_theme_textdomain('gutenkind-lite', get_template_directory() . '/lang');
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support('automatic-feed-links');
@@ -46,8 +46,8 @@ function gutenkind_setup() {
 
 	register_nav_menus(
 		array(
-			'menu-header' 	=> esc_html__('Header Menu', 'gutenkind'),
-			'menu-footer' 	=> esc_html__('Footer Menu', 'gutenkind'),
+			'menu-header' 	=> esc_html__('Header Menu', 'gutenkind-lite'),
+			'menu-footer' 	=> esc_html__('Footer Menu', 'gutenkind-lite'),
 		)
 	);
 
@@ -125,7 +125,7 @@ function gutenkind_menu_header() {
 		printf(
 			'<a class="header__no-menu" href="%1$s">%2$s</a>',
 			esc_url(admin_url('customize.php?autofocus[panel]=nav_menus')),
-			esc_html__('Click here to create your header menu.', 'gutenkind')
+			esc_html__('Click here to create your header menu.', 'gutenkind-lite')
 		);
 	}
 }
@@ -151,7 +151,7 @@ function gutenkind_menu_footer() {
 		printf(
 			'<a class="no-menu" href="%1$s">%2$s</a>',
 			esc_url(admin_url('customize.php?autofocus[panel]=nav_menus')),
-			esc_html__('Click here to create your footer menu.', 'gutenkind')
+			esc_html__('Click here to create your footer menu.', 'gutenkind-lite')
 		);
 	}
 }
@@ -162,9 +162,9 @@ function gutenkind_menu_footer() {
 function gutenkind_register_sidebars() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__('Sidebar', 'gutenkind'),
+			'name'          => esc_html__('Sidebar', 'gutenkind-lite'),
 			'id'            => 'sidebar',
-			'description'   => esc_html__('Add widgets here to appear in your sidebar.', 'gutenkind'),
+			'description'   => esc_html__('Add widgets here to appear in your sidebar.', 'gutenkind-lite'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget__title">',
@@ -173,9 +173,9 @@ function gutenkind_register_sidebars() {
 	);
 	register_sidebar(
 		array(
-			'name'          => esc_html__('Footer Column 1', 'gutenkind'),
+			'name'          => esc_html__('Footer Column 1', 'gutenkind-lite'),
 			'id'            => 'footer-widgets-1',
-			'description'   => esc_html__('Add widgets here to appear in your left footer column.', 'gutenkind'),
+			'description'   => esc_html__('Add widgets here to appear in your left footer column.', 'gutenkind-lite'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget__title">',
@@ -184,9 +184,9 @@ function gutenkind_register_sidebars() {
 	);
 	register_sidebar(
 		array(
-			'name'          => esc_html__('Footer Column 2', 'gutenkind'),
+			'name'          => esc_html__('Footer Column 2', 'gutenkind-lite'),
 			'id'            => 'footer-widgets-2',
-			'description'   => esc_html__('Add widgets here to appear in your center footer column.', 'gutenkind'),
+			'description'   => esc_html__('Add widgets here to appear in your center footer column.', 'gutenkind-lite'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget__title">',
@@ -195,9 +195,9 @@ function gutenkind_register_sidebars() {
 	);
 	register_sidebar(
 		array(
-			'name'          => esc_html__('Footer Column 3', 'gutenkind'),
+			'name'          => esc_html__('Footer Column 3', 'gutenkind-lite'),
 			'id'            => 'footer-widgets-3',
-			'description'   => esc_html__('Add widgets here to appear in your right footer column.', 'gutenkind'),
+			'description'   => esc_html__('Add widgets here to appear in your right footer column.', 'gutenkind-lite'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget__title">',

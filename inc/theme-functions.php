@@ -48,7 +48,7 @@ add_action( 'wp_enqueue_scripts', 'contactform_dequeue_scripts', 99 );
 * Meta Category
 */
 function gutenkind_meta_cat() {
-	$categories_list = get_the_category_list(esc_html__( ' ', 'gutenkind' ));
+	$categories_list = get_the_category_list(esc_html__( ' ', 'gutenkind-lite' ));
 	if ($categories_list) {
 		printf(
 			'<span class="meta-cat cat-links">%1$s</span>',
@@ -65,9 +65,9 @@ function gutenkind_meta_author() {
 	$author_id = $post->post_author;
 	printf(
 		'<span class="meta-author byline"><span class="author"><a class="url fn n" href="%2$s">%3$s %4$s</a></span></span>',
-		esc_html__('Posted by', 'gutenkind'),
+		esc_html__('Posted by', 'gutenkind-lite'),
 		get_author_posts_url($author_id),
-		esc_html__('by', 'gutenkind'),
+		esc_html__('by', 'gutenkind-lite'),
 		get_the_author_meta('display_name', $author_id)
 	);
 }
@@ -89,7 +89,7 @@ function gutenkind_meta_date() {
 function gutenkind_meta_comments() {
 	if (!post_password_required() && (comments_open() && get_comments_number() >= '1')) {
 		echo '<span class="meta-comments">';
-			comments_popup_link( '', '1 '. esc_html__('Comment', 'gutenkind'), '% '. esc_html__('Comments', 'gutenkind'), 'comments-link', '');
+			comments_popup_link( '', '1 '. esc_html__('Comment', 'gutenkind-lite'), '% '. esc_html__('Comments', 'gutenkind-lite'), 'comments-link', '');
 		echo '</span>';
 	}
 }
@@ -176,35 +176,35 @@ function gutenkind_pagination($type = '') { ?>
 	<div class="pagination-<?php echo esc_attr($type); ?> voss-ajax-pagination"> <?php
 	    if ($type == 'btn') {
 			if (get_previous_posts_link()) { ?>
-				<a class="prev button" href="<?php esc_url(previous_posts()); ?>"><?php esc_html_e('Older Posts', 'gutenkind') ?></a> <?php
+				<a class="prev button" href="<?php esc_url(previous_posts()); ?>"><?php esc_html_e('Older Posts', 'gutenkind-lite') ?></a> <?php
 			}
 			if (get_next_posts_link()) { ?>
-				<a class="next button" href="<?php esc_url(next_posts()); ?>"><?php esc_html_e('Newer Posts', 'gutenkind') ?></a> <?php
+				<a class="next button" href="<?php esc_url(next_posts()); ?>"><?php esc_html_e('Newer Posts', 'gutenkind-lite') ?></a> <?php
 			}
 	    } else if ($type == 'links') {
 	        the_posts_pagination( array(
 				'mid_size'  => 1,
-				'prev_text' => esc_html__('Newer Posts', 'gutenkind'),
-				'next_text' => esc_html__('Older Posts', 'gutenkind'),
+				'prev_text' => esc_html__('Newer Posts', 'gutenkind-lite'),
+				'next_text' => esc_html__('Older Posts', 'gutenkind-lite'),
 			));
 	    } else if ($type == 'numeric') {
 	        the_posts_pagination( array(
 				'mid_size'  => 1,
-				'prev_text' => ''. gutenkind_template_part('/dist/svg/svg-arrow-down') .''. esc_html__('Previous', 'gutenkind') .'',
-				'next_text' => ''. esc_html__('Next', 'gutenkind') .''. gutenkind_template_part('/dist/svg/svg-arrow-down') .'',
+				'prev_text' => ''. gutenkind_template_part('/dist/svg/svg-arrow-down') .''. esc_html__('Previous', 'gutenkind-lite') .'',
+				'next_text' => ''. esc_html__('Next', 'gutenkind-lite') .''. gutenkind_template_part('/dist/svg/svg-arrow-down') .'',
 			));
 	    } else if ($type == 'load') { ?>
 			<div class="page-load-status">
 				<div class="infinite-scroll-request"><div class="voss-load"></div></div>
-				<p class="infinite-scroll-last"><?php esc_html_e('No More Posts', 'gutenkind' ); ?></p>
-				<p class="infinite-scroll-error"><?php esc_html_e('No More Posts', 'gutenkind'); ?></p>
+				<p class="infinite-scroll-last"><?php esc_html_e('No More Posts', 'gutenkind-lite' ); ?></p>
+				<p class="infinite-scroll-error"><?php esc_html_e('No More Posts', 'gutenkind-lite'); ?></p>
 			</div>
-			<a href="<?php esc_url(next_posts()); ?>" class="button voss-load-btn"><?php esc_html_e('Load More', 'gutenkind'); ?></a> <?php
+			<a href="<?php esc_url(next_posts()); ?>" class="button voss-load-btn"><?php esc_html_e('Load More', 'gutenkind-lite'); ?></a> <?php
 	    } else if ($type == 'infinite') { ?>
 			<div class="page-load-status">
 				<div class="infinite-scroll-request"><div class="voss-load"></div></div>
-				<p class="infinite-scroll-last"><?php esc_html_e('No More Posts', 'gutenkind'); ?></p>
-				<p class="infinite-scroll-error"><?php esc_html_e('No More Posts', 'gutenkind'); ?></p>
+				<p class="infinite-scroll-last"><?php esc_html_e('No More Posts', 'gutenkind-lite'); ?></p>
+				<p class="infinite-scroll-error"><?php esc_html_e('No More Posts', 'gutenkind-lite'); ?></p>
 			</div>
 			<a href="<?php esc_url(next_posts()); ?>" class="voss-load-btn"></a> <?php
 	    } ?>
@@ -219,7 +219,7 @@ function gutenkind_tags() {
 	if ( $tags_list ) {
 		printf(
 			'<div class="tags-links">%2$s</div>',
-			__( 'Tags:', 'gutenkind' ),
+			__( 'Tags:', 'gutenkind-lite' ),
 			$tags_list
 		);
 	}

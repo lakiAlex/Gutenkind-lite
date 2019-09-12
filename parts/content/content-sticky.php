@@ -14,7 +14,7 @@
 				?>
 			</div>
 			<div class="post-more-wrap">
-				<a class="post-more button" href="<?php echo esc_url(get_permalink()); ?>"><?php esc_html_e('View Post', 'gutenkind'); ?></a>
+				<a class="post-more button" href="<?php echo esc_url(get_permalink()); ?>"><?php esc_html_e('View Post', 'gutenkind-lite'); ?></a>
 			</div>
 		</div>
 	</div>

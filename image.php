@@ -15,7 +15,7 @@
 					<?php
 						wp_link_pages(
 							array(
-								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'gutenkind' ),
+								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'gutenkind-lite' ),
 								'after'  => '</div>',
 							)
 						);

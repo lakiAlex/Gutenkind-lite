@@ -4,24 +4,24 @@
 		if (get_theme_mod( 'archive-page-subtitle', true ) == true) { ?>
 			<span class="archive-subtitle"> <?php
 				if (is_category()) {
-					//esc_html_e('Category Archives', 'gutenkind');
+					//esc_html_e('Category Archives', 'gutenkind-lite');
 				} else if (is_tag()) {
-					esc_html_e('Tag Archives', 'gutenkind');
+					esc_html_e('Tag Archives', 'gutenkind-lite');
 				} else if (is_author()) {
-					esc_html_e('Author Archives', 'gutenkind');
+					esc_html_e('Author Archives', 'gutenkind-lite');
 				} else if (is_search()) {
-					esc_html_e('Search results for', 'gutenkind');
+					esc_html_e('Search results for', 'gutenkind-lite');
 				} else if (is_day()) {
-					esc_html_e('Daily Archives', 'gutenkind');
+					esc_html_e('Daily Archives', 'gutenkind-lite');
 				} else if (is_month()) {
-					esc_html_e('Montly Archives', 'gutenkind');
+					esc_html_e('Montly Archives', 'gutenkind-lite');
 				} else if (is_year()) {
-					esc_html_e('Yearly Archives', 'gutenkind');
+					esc_html_e('Yearly Archives', 'gutenkind-lite');
 				} else if (is_post_type_archive()) {
-					esc_html_e('Post Type Archives', 'gutenkind');
+					esc_html_e('Post Type Archives', 'gutenkind-lite');
 				} else if (is_tax()) {
 					$tax = get_taxonomy( get_queried_object()->taxonomy );
-					echo sprintf( esc_html__( '%s Archives:', 'gutenkind' ), $tax->labels->singular_name );
+					echo sprintf( esc_html__( '%s Archives:', 'gutenkind-lite' ), $tax->labels->singular_name );
 				} ?>
 			</span> <?php
 		}
@@ -44,7 +44,7 @@
 			} else if (is_year()) {
 				echo get_the_date('Y');
 			} else {
-				esc_html_e( 'Archives', 'gutenkind' );
+				esc_html_e( 'Archives', 'gutenkind-lite' );
 			} ?>
 		</h2>
 	<?php } ?>

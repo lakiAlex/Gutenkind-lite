@@ -62,7 +62,7 @@ $i = 0;
 										if ($excerpt == true) gutenkind_excerpt($excerpt_length); 
 										if ($more == true) { ?>
 											<a class="post-more link" href="<?php echo esc_url(get_permalink()); ?>">
-												<?php esc_html_e('Read More', 'gutenkind'); ?>
+												<?php esc_html_e('Read More', 'gutenkind-lite'); ?>
 											</a><?php
 										}
 									?>

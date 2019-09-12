@@ -19,7 +19,7 @@ if ($posts->have_posts()) : ?>
 <div class="block__post-box" data-style="3">
 
     <div class="block__title-sm">
-        <h4><?php esc_html_e('Trending Posts', 'gutenkind'); ?></h4>
+        <h4><?php esc_html_e('Trending Posts', 'gutenkind-lite'); ?></h4>
     </div>
             
     <div class="block__post-box-wrap">
@@ -34,7 +34,7 @@ if ($posts->have_posts()) : ?>
                             <?php if (function_exists('gutenkind_meta_cat')) gutenkind_meta_cat(); ?>
                             <h3 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                             <?php gutenkind_excerpt(15); ?>
-                            <a class="post-more link" href="<?php the_permalink(); ?>"><?php esc_html_e('Read More', 'gutenkind'); ?></a>
+                            <a class="post-more link" href="<?php the_permalink(); ?>"><?php esc_html_e('Read More', 'gutenkind-lite'); ?></a>
                         </div>
 
                         <div class="post-media" data-bg="<?php echo esc_url(gutenkind_thumb_url('single')); ?>" title="<?php echo esc_html(get_the_title()); ?>">

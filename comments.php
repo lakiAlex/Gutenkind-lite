@@ -10,8 +10,8 @@ $discussion = gutenkind_get_discussion_data();
 
 <div class="comments-show-btn">
 	<button class="btn has-background <?php if (have_comments() || !is_single()) echo esc_html('active'); ?>">
-		<span class="on"><?php esc_html_e('Show Comments +', 'gutenkind'); ?></span>
-		<span class="off"><?php esc_html_e('Hide Comments -', 'gutenkind'); ?></span>
+		<span class="on"><?php esc_html_e('Show Comments +', 'gutenkind-lite'); ?></span>
+		<span class="off"><?php esc_html_e('Hide Comments -', 'gutenkind-lite'); ?></span>
 	</button>
 </div>
 
@@ -22,21 +22,21 @@ $discussion = gutenkind_get_discussion_data();
 		<?php
 			if (comments_open()) {
 				if (have_comments()) {
-					esc_html_e( 'Join the Discussion', 'gutenkind' );
+					esc_html_e( 'Join the Discussion', 'gutenkind-lite' );
 				} else {
-					esc_html_e( 'Leave a Comment', 'gutenkind' );
+					esc_html_e( 'Leave a Comment', 'gutenkind-lite' );
 				}
 			} else {
-				esc_html_e('Comments are closed', 'gutenkind');
+				esc_html_e('Comments are closed', 'gutenkind-lite');
 			}
 		?>
 		</h4><!-- .comments-title -->
 		<?php
 			if (have_comments() && comments_open()) {
 				if ($discussion->responses > 0) {
-					$meta_label = sprintf(_n( '%d Response', '%d Responses', $discussion->responses, 'gutenkind' ), $discussion->responses);
+					$meta_label = sprintf(_n( '%d Response', '%d Responses', $discussion->responses, 'gutenkind-lite' ), $discussion->responses);
 				} else {
-					$meta_label = __('No Comments', 'gutenkind');
+					$meta_label = __('No Comments', 'gutenkind-lite');
 				} ?>
 				<div class="discussion-meta">
 					<?php if ($discussion->responses > 0) gutenkind_discussion_avatars_list($discussion->authors); ?>

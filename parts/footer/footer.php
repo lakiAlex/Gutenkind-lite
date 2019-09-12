@@ -7,13 +7,13 @@ $show_tagline 					= get_theme_mod('footer_show_tagline', false);
 $footer_social 					= get_theme_mod( 'footer_social', true );
 $footer_menu 					= get_theme_mod( 'footer_menu', true );
 $footer_newsletter				= get_theme_mod( 'footer_newsletter', true );
-$footer_newsletter_heading		= get_theme_mod( 'footer_newsletter_heading', esc_html__('Subscribe to our weekly newsletter' , 'gutenkind') );
+$footer_newsletter_heading		= get_theme_mod( 'footer_newsletter_heading', esc_html__('Subscribe to our weekly newsletter' , 'gutenkind-lite') );
 $footer_instagram          		= get_theme_mod( 'footer_instagram', true );
 $footer_instagram_user          = get_theme_mod( 'footer_instagram_user', 'codezeit' );
 $footer_instagram_number        = get_theme_mod( 'footer_instagram_number', 6 );
-$footer_instagram_link          = get_theme_mod( 'footer_instagram_link', esc_html__('https://instagram.com/', 'gutenkind') );
-$footer_instagram_link_text     = get_theme_mod( 'footer_instagram_link_text', esc_html__('@thegutenkind', 'gutenkind') );
-$footer_disclaimer 				= get_theme_mod( 'footer_disclaimer', '<p>&copy;'. date(' Y ') .'<a href="'. get_home_url('/') .'">'. get_bloginfo( 'name' ) .'</a>'. esc_html__( '. All Rights Reserved.', 'gutenkind' ) .'</p>' );
+$footer_instagram_link          = get_theme_mod( 'footer_instagram_link', esc_html__('https://instagram.com/', 'gutenkind-lite') );
+$footer_instagram_link_text     = get_theme_mod( 'footer_instagram_link_text', esc_html__('@thegutenkind', 'gutenkind-lite') );
+$footer_disclaimer 				= get_theme_mod( 'footer_disclaimer', '<p>&copy;'. date(' Y ') .'<a href="'. get_home_url('/') .'">'. get_bloginfo( 'name' ) .'</a>'. esc_html__( '. All Rights Reserved.', 'gutenkind-lite' ) .'</p>' );
 $sroll_top						= get_theme_mod( 'scroll-top', true);
 
 ?>
@@ -32,8 +32,8 @@ $sroll_top						= get_theme_mod( 'scroll-top', true);
 									printf(
 										'<a href="%1$s" target="_blank" class="newsletter-error">%2$s %3$s</a>',
 										esc_url('https://kb.mc4wp.com/'),
-										esc_html__('Please setup "Mailchimp for WordPress" plugin in order to display the form.', 'gutenkind'),
-										esc_html__('Click here for more details.', 'gutenkind')
+										esc_html__('Please setup "Mailchimp for WordPress" plugin in order to display the form.', 'gutenkind-lite'),
+										esc_html__('Click here for more details.', 'gutenkind-lite')
 									);
 								} else {
 									mc4wp_show_form();

@@ -1,7 +1,7 @@
 "use strict";
 
 // Theme name
-var domain = "gutenkind";
+var domain = "gutenkind-lite";
 
 // Load Dependencies
 const {src, dest, series, parallel, watch} = require("gulp");

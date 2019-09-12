@@ -23,7 +23,7 @@
                                             <?php if (function_exists('gutenkind_meta_cat')) gutenkind_meta_cat(); ?>
                                             <h2 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                                             <?php gutenkind_excerpt(25); ?>
-                                            <a class="post-more link" href="<?php the_permalink(); ?>"><?php esc_html_e('Read More', 'gutenkind'); ?></a>
+                                            <a class="post-more link" href="<?php the_permalink(); ?>"><?php esc_html_e('Read More', 'gutenkind-lite'); ?></a>
                                         </div>
                                     </article>
                                 </div>

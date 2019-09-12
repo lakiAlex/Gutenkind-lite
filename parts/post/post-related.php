@@ -4,7 +4,7 @@ $related = gutenkind_related_posts(get_the_ID(), 7);
 
 if ($related->have_posts()) : ?>
 	<div class="single-related">
-		<h4 class="section-title"><?php esc_html_e('Related Stories', 'gutenkind'); ?></h4>
+		<h4 class="section-title"><?php esc_html_e('Related Stories', 'gutenkind-lite'); ?></h4>
 
 		<div class="vslider"
 			data-style="9"

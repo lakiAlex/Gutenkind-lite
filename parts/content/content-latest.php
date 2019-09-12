@@ -30,9 +30,9 @@ $i = 0;
     <div class="voss-posts-content">
 
         <div class="block__title text-center">
-            <h3><?php esc_html_e('Latest Stories', 'gutenkind'); ?></h3>
+            <h3><?php esc_html_e('Latest Stories', 'gutenkind-lite'); ?></h3>
             <a class="block__link link" href="<?php echo get_permalink(get_option('page_for_posts')); ?>">
-                <?php esc_html_e('View All', 'gutenkind'); ?>
+                <?php esc_html_e('View All', 'gutenkind-lite'); ?>
             </a>
         </div>
 

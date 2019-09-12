@@ -42,7 +42,7 @@ $related		= get_theme_mod('single-related', true);
 				<div class="entry-content">
 					<?php
 						the_content();
-						wp_link_pages(array('before' => '<div class="page-links">' . esc_html__('Pages:', 'gutenkind'),'after'  => '</div>',));
+						wp_link_pages(array('before' => '<div class="page-links">' . esc_html__('Pages:', 'gutenkind-lite'),'after'  => '</div>',));
 						if ($tags == true && function_exists('gutenkind_tags')) gutenkind_tags();
 					?>
 				</div>
